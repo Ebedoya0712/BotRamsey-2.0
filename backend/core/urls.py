@@ -25,5 +25,4 @@ def home(request):
 urlpatterns = [
     path('', home, name='home'),  # Redirige la raíz a una vista básica.
     path('admin/', admin.site.urls),
-    path('api/', include('chatbot.urls')),
 ]
