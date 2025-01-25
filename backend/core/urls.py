@@ -1,28 +1,25 @@
-"""
-URL configuration for backend project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from microservicios.accesibilidad.utils.voice_assistant import reproducir_audio
+from microservicios.analisis.views import analisis
 
 def home(request):
     return HttpResponse("Bienvenido a BotRamsey. Usa /api/chatbot/ para interactuar con el chatbot.")
 
+def llamar_asistente_voz(request):
+    """Vista que llama al asistente de voz desde el core."""
+    texto = "Hola, Como oyes el CORE esta llamando a el asistente de voz y las subdependecias asociadas a ella "
+    
+    # Llamada a la función que reproduce el audio
+    reproducir_audio(texto)
+    
+    return HttpResponse("El mensaje de voz ha sido reproducido desde el core.")
+
 urlpatterns = [
     path('', home, name='home'),  # Redirige la raíz a una vista básica.
     path('admin/', admin.site.urls),
+    path('asistente_voz/', llamar_asistente_voz, name='llamar_asistente_voz'),  # Ruta para el asistente de voz
+    path('analisis/', analisis, name='analisis'),
+
 ]

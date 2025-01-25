@@ -8,6 +8,7 @@ def install_dependencies():
         "django-cors-headers",
         "beautifulsoup4",
         "requests",
+        "SpeechRecognition"
         "pandas",
         "selenium",
         "scikit-learn",

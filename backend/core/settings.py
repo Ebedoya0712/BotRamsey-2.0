@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'microservicios.limpieza',
     'microservicios.modelos',
     'microservicios.scraping',
+    'microservicios.analisis',
+
 
 
 ]
