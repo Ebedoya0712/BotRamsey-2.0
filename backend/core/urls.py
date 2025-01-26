@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from microservicios.scraping.views import buscar_receta_view
 from microservicios.accesibilidad.utils.voice_assistant import reproducir_audio
 from microservicios.analisis.views import analisis
 
@@ -21,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('asistente_voz/', llamar_asistente_voz, name='llamar_asistente_voz'),  # Ruta para el asistente de voz
     path('analisis/', analisis, name='analisis'),
-
+    path('api/buscar_receta/', buscar_receta_view, name='buscar_receta'),
 ]
