@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'microservicios.accesibilidad',
     'microservicios.media',
-    'microservicios.limpieza',
     'microservicios.modelos',
     'microservicios.scraping',
     'microservicios.analisis',
+    'microservicios.limpieza',
 
 
 

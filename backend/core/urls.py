@@ -1,8 +1,8 @@
+# urls.py principal
+
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
-from microservicios.accesibilidad.utils.voice_assistant import reproducir_audio
-from microservicios.analisis.views import analisis
 
 def home(request):
     return HttpResponse("Bienvenido a BotRamsey. Usa /api/chatbot/ para interactuar con el chatbot.")
@@ -20,6 +20,5 @@ urlpatterns = [
     path('', home, name='home'),  # Redirige la raíz a una vista básica.
     path('admin/', admin.site.urls),
     path('asistente_voz/', llamar_asistente_voz, name='llamar_asistente_voz'),  # Ruta para el asistente de voz
-    path('analisis/', analisis, name='analisis'),
-
+    path('analisis/', include('microservicios.analisis.urls')),  # Incluir las rutas del microservicio 'analisis'
 ]
