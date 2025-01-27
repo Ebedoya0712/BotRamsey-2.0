@@ -40,16 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'microservicios.accesibilidad',
-    'microservicios.media',
     'microservicios.modelos',
     'microservicios.scraping',
     'microservicios.analisis',
     'microservicios.limpieza',
     #'microservicios.media',
-    'microservicios.limpieza',
-    'microservicios.modelos',
-    'microservicios.scraping',
-    'microservicios.analisis',
+  
     'corsheaders'
 
 
