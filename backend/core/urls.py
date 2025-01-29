@@ -5,7 +5,7 @@ from django.urls import path, include
 from django.http import HttpResponse
 from microservicios.scraping.views import buscar_receta_view
 from microservicios.accesibilidad.utils.voice_assistant import reproducir_audio
-from microservicios.analisis.views import analisis
+from microservicios.analisis import views  # Asegúrate de que la vista está correctamente importada
 
 def home(request):
     return HttpResponse("Bienvenido a BotRamsey. Usa /api/chatbot/ para interactuar con el chatbot.")
@@ -23,7 +23,7 @@ urlpatterns = [
     path('', home, name='home'),  # Redirige la raíz a una vista básica.
     path('admin/', admin.site.urls),
     path('asistente_voz/', llamar_asistente_voz, name='llamar_asistente_voz'),  # Ruta para el asistente de voz
-    path('analisis/', include('microservicios.analisis.urls')),  # Incluir las rutas del microservicio 'analisis'
-    path('analisis/', analisis, name='analisis'),
+    path('analisis/', views.analisis_view, name='analisis'),
+
     path('api/buscar_receta/', buscar_receta_view, name='buscar_receta'),
 ]
