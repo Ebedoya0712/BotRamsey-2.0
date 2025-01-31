@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'microservicios.accesibilidad',
     'microservicios.modelos',
     'microservicios.scraping',
-    'microservicios.analisis',
+    # 'microservicios.analisis',
     'microservicios.limpieza',
+    'microservicios.nutricion',
     #'microservicios.media',
   
     'corsheaders'
