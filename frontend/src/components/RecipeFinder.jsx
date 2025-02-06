@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { motion } from "framer-motion";
-import axios from "axios";
+import {
+  buscarReceta,
+  enviarFeedback,
+  guardarUsuario,
+} from "../api/apiController";
 
 // 🌑 Estilos globales
 const GlobalStyle = createGlobalStyle`
@@ -25,7 +29,21 @@ const Container = styled(motion.div)`
   padding: 20px;
 `;
 
-// 📌 Botón estilizado
+// 📝 Input con estilos
+const Input = styled.input`
+  padding: 12px;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+`;
+
+// 📌 Botón
 const Button = styled.button`
   background: linear-gradient(135deg, #2ecc71, #52b0c4);
   color: white;
@@ -43,70 +61,40 @@ const Button = styled.button`
   }
 `;
 
-// 📌 Input y Textarea estilizados
-const Input = styled.input`
-  padding: 12px;
-  width: 80%;
-  max-width: 400px;
-  margin-top: 15px;
-  border-radius: 8px;
-  border: 1px solid #444;
-  background-color: #1e1e1e;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-`;
-
-const TextArea = styled.textarea`
-  padding: 12px;
-  width: 80%;
-  max-width: 400px;
-  height: 80px;
-  margin-top: 15px;
-  border-radius: 8px;
-  border: 1px solid #444;
-  background-color: #1e1e1e;
-  color: white;
-  font-size: 16px;
-  resize: none;
-`;
-
-// 📌 Contenedor de botones
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-`;
-
-// 📌 Botón de Like y Dislike
-const LikeButton = styled(Button)`
-  background: #2ecc71;
-  &:hover {
-    background: #27ae60;
-  }
-`;
-
-const DislikeButton = styled(Button)`
-  background: #e74c3c;
-  &:hover {
-    background: #c0392b;
-  }
-`;
-
 const screens = [
-  { question: "🌟 Bienvenido a Bootsamsey 🍽️", placeholder: "", isFirst: true },
-  { question: "¿Cuál es tu nombre?", placeholder: "Escribe tu nombre" },
-  { question: "¿Cuál es tu apellido?", placeholder: "Escribe tu apellido" },
-  { question: "¿Cuántos años tienes?", placeholder: "Escribe tu edad" },
   {
+    key: "bienvenida",
+    question: "🌟 Bienvenido a Bootsamsey 🍽️",
+    placeholder: "",
+    isFirst: true,
+  },
+  {
+    key: "nombre",
+    question: "¿Cuál es tu nombre?",
+    placeholder: "Escribe tu nombre",
+  },
+  {
+    key: "apellido",
+    question: "¿Cuál es tu apellido?",
+    placeholder: "Escribe tu apellido",
+  },
+  {
+    key: "edad",
+    question: "¿Cuántos años tienes?",
+    placeholder: "Escribe tu edad",
+  },
+  {
+    key: "preferencias",
     question: "¿Cuáles son tus recetas favoritas?",
     placeholder: "Ejemplo: Pizza, Ensalada, Pasta...",
   },
   {
+    key: "ingredientes",
     question: "¿Cuáles son tus ingredientes favoritos?",
     placeholder: "Ejemplo: Tomate, Queso, Albahaca...",
   },
   {
+    key: "busqueda",
     question: "🔍 Buscador de Recetas",
     placeholder: "Escribe el nombre de la receta",
   },
@@ -114,15 +102,27 @@ const screens = [
 
 const RecipeFinder = () => {
   const [screen, setScreen] = useState(0);
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState(
+    JSON.parse(sessionStorage.getItem("usuario")) || {},
+  );
   const [query, setQuery] = useState("");
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
-  const [comment, setComment] = useState("");
-  const [feedbackSent, setFeedbackSent] = useState(false);
 
-  const nextScreen = () => {
-    if (screen < screens.length - 1) setScreen(screen + 1);
+  useEffect(() => {
+    sessionStorage.setItem("usuario", JSON.stringify(answers));
+  }, [answers]);
+
+  const nextScreen = async () => {
+    if (screen < screens.length - 1) {
+      setScreen(screen + 1);
+    } else {
+      await enviarDatosAlBackend();
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setAnswers({ ...answers, [screens[screen].key]: e.target.value });
   };
 
   const handleKeyDown = (e) => {
@@ -133,35 +133,19 @@ const RecipeFinder = () => {
     try {
       setError(null);
       setRecipe(null);
-
-      const response = await axios.get(
-        "http://127.0.0.1:8000/api/buscar_receta/",
-        { params: { query } },
-      );
-
-      if (response.data) {
-        setRecipe(response.data);
-      } else {
-        setError("No se encontró ninguna receta.");
-      }
+      const data = await buscarReceta(query);
+      setRecipe(data || { titulo: "No encontrada", ingredientes: [] });
     } catch (err) {
-      setError("Hubo un error al buscar la receta. Inténtalo de nuevo.");
+      setError("Error al buscar la receta.");
     }
   };
 
-  const sendFeedback = async (type) => {
-    if (!recipe) return;
-
+  const enviarDatosAlBackend = async () => {
     try {
-      await axios.post("http://127.0.0.1:8000/api/feedback/", {
-        recipe: recipe.titulo,
-        type, // "like" o "dislike"
-        comment,
-      });
-
-      setFeedbackSent(true);
+      await guardarUsuario(answers);
+      console.log("Usuario guardado en la base de datos");
     } catch (error) {
-      console.error("Error enviando feedback:", error);
+      console.error("Error guardando usuario:", error);
     }
   };
 
@@ -195,53 +179,13 @@ const RecipeFinder = () => {
             )}
 
             {recipe && (
-              <div
-                style={{
-                  marginTop: "20px",
-                  textAlign: "left",
-                  backgroundColor: "#1e1e1e",
-                  padding: "20px",
-                  borderRadius: "10px",
-                }}
-              >
+              <div>
                 <h2>{recipe.titulo}</h2>
-                <p>
-                  <strong>Tipo:</strong> {recipe.tipo}
-                </p>
-                <p>
-                  <strong>Ingredientes:</strong>
-                </p>
                 <ul>
                   {recipe.ingredientes.map((ingrediente, index) => (
                     <li key={index}>{ingrediente}</li>
                   ))}
                 </ul>
-                <p>
-                  <strong>Valoración:</strong> {recipe.valoracion}
-                </p>
-
-                {/* Sección de Comentarios y Feedback */}
-                <h3>¿Te gustó esta receta?</h3>
-                <TextArea
-                  placeholder='Escribe tu comentario...'
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                />
-
-                <ButtonContainer>
-                  <LikeButton onClick={() => sendFeedback("like")}>
-                    👍 Like
-                  </LikeButton>
-                  <DislikeButton onClick={() => sendFeedback("dislike")}>
-                    👎 Dislike
-                  </DislikeButton>
-                </ButtonContainer>
-
-                {feedbackSent && (
-                  <p style={{ marginTop: "10px", color: "lightgreen" }}>
-                    ¡Gracias por tu opinión! 🎉
-                  </p>
-                )}
               </div>
             )}
           </>
@@ -250,13 +194,8 @@ const RecipeFinder = () => {
             <Input
               type='text'
               placeholder={screens[screen].placeholder}
-              value={answers[screens[screen].question] || ""}
-              onChange={(e) =>
-                setAnswers({
-                  ...answers,
-                  [screens[screen].question]: e.target.value,
-                })
-              }
+              value={answers[screens[screen].key] || ""}
+              onChange={handleInputChange}
               onKeyDown={handleKeyDown}
             />
             <Button onClick={nextScreen}>Siguiente</Button>
