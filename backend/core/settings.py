@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     # 'microservicios.analisis',
     'microservicios.limpieza',
     'microservicios.nutricion',
-    'psycopg2',
+    'microservicios.usuarios',
+
+    #'microservicios.media',
   
     'corsheaders'
 
