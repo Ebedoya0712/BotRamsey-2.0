@@ -4,8 +4,8 @@ import Questions from "./components/Question/QuestionComponent";
 
 const App = () => (
   <div>
-    {/* <RecipeFinder /> */}
-    <Questions />
+    <RecipeFinder />
+    {/* <Questions /> */}
   </div>
 );
 

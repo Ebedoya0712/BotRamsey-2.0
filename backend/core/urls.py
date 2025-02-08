@@ -26,4 +26,6 @@ urlpatterns = [
     # path('analisis/', views.analisis_view, name='analisis'),
     path('api/', include('microservicios.nutricion.urls')),  # URLs del 
     path('api/buscar_receta/', buscar_receta_view, name='buscar_receta'),
+        path('api/', include('microservicios.usuarios.urls')),
+
 ]
