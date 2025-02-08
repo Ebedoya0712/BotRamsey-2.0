@@ -97,7 +97,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'botramsey',         # Nombre de la base de datos
         'USER': 'postgres',       # Usuario de PostgreSQL
-        'PASSWORD': '',     # Contraseña del usuario
+        'PASSWORD': '123456',     # Contraseña del usuario
         'HOST': 'localhost',          # Host de la base de datos (puede ser 'localhost' o una IP)
         'PORT': '5432',               # Puerto de PostgreSQL (por defecto es 5432)
     }
