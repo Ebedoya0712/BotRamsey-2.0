@@ -8,7 +8,9 @@ export const buscarReceta = async (query) => {
     const response = await axios.get(`${API_URL}/buscar_receta/`, {
       params: { query },
     });
-    return response.data;
+    // Ahora, la respuesta incluye la preparación
+    const receta = response.data;
+    return receta;  // Devuelve toda la receta, que incluye preparación
   } catch (error) {
     console.error("Error al buscar la receta:", error);
     throw new Error("Hubo un error al buscar la receta.");
