@@ -32,13 +32,13 @@
     },
     "Receta de Chipa de queso": {
         "ingredientes": [
-            "500 gramos de f cula de mandioca",
+            "500 gramos de fécula de mandioca",
             "120 gramos de queso pategras",
             "120 gramos de queso sardo",
             "2 huevos",
             "1 cucharada postre de sal (opcional)",
             "1 cucharada postre de nuez moscada (opcional)",
-            "  cucharada postre de pimienta (opcional)",
+            "½ cucharada postre de pimienta (opcional)",
             "100 mililitros de leche",
             "100 gramos de manteca"
         ],
@@ -1630,5 +1630,64 @@
         "Duracion": "30m",
         "Dificultad": "baja",
         "Tipo": "Rumanescu"
+    },
+    "Receta de Torta de tres leches con coco": {
+        "ingredientes": [
+            "200 gramos de Azúcar blanco",
+            "145 gramos de Harina de trigo",
+            "1 cucharadita de Polvo de hornear",
+            "1 pizca de Sal",
+            "4 unidades de Huevos",
+            "1 taza de Coco rallado                                                                    (100 gramos)",
+            "300 gramos de Leche condensada                                                                    (1¼ tazas)",
+            "250 gramos de Leche de coco",
+            "200 gramos de Leche fresca",
+            "1 lata de Melocotones"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "2h 30m",
+        "Dificultad": "media",
+        "Tipo": "Tartas"
+    },
+    "Receta de Torta tres leches": {
+        "ingredientes": [
+            "6 huevos",
+            "200 gramos de azúcar                                                                    (1 taza)",
+            "200 gramos de harina",
+            "1 cucharadita de esencia de vainilla",
+            "1 cucharadita de polvo para hornear",
+            "1 lata de leche condensada (grande)",
+            "1 lata de leche evaporada (grande)",
+            "1 lata de crema de leche (grande)",
+            "3 claras de huevo",
+            "1 taza de azúcar (al gusto)"
+        ],
+        "Valoracion": "94.60%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Pasteles"
+    },
+    "Receta de Pasta con carne molida y crema": {
+        "ingredientes": [
+            "½ kilogramo de Carne molida",
+            "1 unidad de Chile chipotle",
+            "1 unidad de Cebolla",
+            "1 diente de Ajo",
+            "1 unidad de Tomate grande",
+            "1 pizca de Pimienta",
+            "1 chorro de Aceite",
+            "4 hojas de Laurel",
+            "1 lata de Leche evaporada",
+            "1 cucharadita de Mantequilla",
+            "1 diente de Ajo",
+            "½ trozo de Cebolla",
+            "1 pizca de Sal y Pimienta",
+            "4 rebanadas de Queso amarillo",
+            "1 paquete de Pasta - Espaguetti o Macarrones"
+        ],
+        "Valoracion": "68.80%",
+        "Duracion": "30m",
+        "Dificultad": "media",
+        "Tipo": "Macarrones"
     }
 }

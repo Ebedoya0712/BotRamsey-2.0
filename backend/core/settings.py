@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -93,17 +93,6 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'botramsey',         # Nombre de la base de datos
-        'USER': 'postgres',       # Usuario de PostgreSQL
-        'PASSWORD': '123456',     # Contraseña del usuario
-        'HOST': 'localhost',          # Host de la base de datos (puede ser 'localhost' o una IP)
-        'PORT': '5432',               # Puerto de PostgreSQL (por defecto es 5432)
-    }
-}
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
