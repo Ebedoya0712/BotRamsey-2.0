@@ -32,6 +32,39 @@ export const enviarFeedback = async (recipeTitle, type, comment) => {
   }
 };
 
+export const recomendaciones = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/recomendacion/`);
+
+    if (!response.data) {
+      throw new Error("La API devolvió datos vacíos");
+    }
+
+    return response.data;
+  } catch (error) {
+    console.error("Error al buscar recomendaciones:", error);
+    throw new Error("Hubo un error al buscar recomendaciones");
+  }
+};
+
+export const preparacion = async (query) => {
+  try {
+    const response = await axios.get(`${API_URL}/preparacion/`, {
+      params: { query },
+    });
+
+    if (!response.data) {
+      throw new Error("La API devolvió datos vacíos");
+    }
+
+    return response.data;
+  } catch (error) {
+    console.error("Error al buscar recomendaciones:", error);
+    throw new Error("Hubo un error al buscar recomendaciones");
+  }
+};
+
+
 // 📌 Enviar los datos del usuario al backend
 export const guardarUsuario = async (usuario) => {
   try {
