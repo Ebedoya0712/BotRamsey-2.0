@@ -1689,5 +1689,154 @@
         "Duracion": "30m",
         "Dificultad": "media",
         "Tipo": "Macarrones"
+    },
+    "Receta de Calentado de pasta": {
+        "ingredientes": [
+            "1 paquete de Pasta (la pasta que desees)",
+            "250 gramos de Carne desmechada",
+            "2 unidades de Cebolla blanca",
+            "100 gramos de Cebolla larga",
+            "4 unidades de Tomate rojo",
+            "1 pizca de Pasta de ajo",
+            "1 pizca de Orégano",
+            "1 pizca de Sal",
+            "1 pizca de Pimienta",
+            "100 gramos de Frijoles rojos (opcional)"
+        ],
+        "Valoracion": "73.00%",
+        "Duracion": "45m",
+        "Dificultad": "media",
+        "Tipo": "Pasta corta"
+    },
+    "Receta de Pan de carne": {
+        "ingredientes": [
+            "500 gramos de carne molida",
+            "1 huevo",
+            "Sal y especias al gusto",
+            "4 huevos",
+            "1 zanahoria",
+            "½ pimentón rojo",
+            "½ pimentón verde",
+            "100 gramos de queso rebanado",
+            "100 gramos de jamón"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "media",
+        "Tipo": "Vaca"
+    },
+    "Receta de Lubina a la sal": {
+        "ingredientes": [
+            "2 unidades de lubinas de 600 gr. cada una",
+            "2 kilogramos de sal especial para hacer el pescado a la sal",
+            "1 vaso de agua"
+        ],
+        "Valoracion": "68.40%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Lubina"
+    },
+    "Cuánto es una cucharada en ml": {
+        "ingredientes": [],
+        "Valoracion": "82.80%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Medidas y equivalencias"
+    },
+    "Receta de Cuscús marroquí con verduras": {
+        "ingredientes": [
+            "½ Pimiento rojo",
+            "1 Calabacín pequeño",
+            "6 Champiñones",
+            "½ Cebolla",
+            "100 gramos de Cuscús marroquí",
+            "1 cucharada sopera de Finas hierbas",
+            "1 cucharada sopera de Aceite de oliva",
+            "1 pizca de Sal"
+        ],
+        "Valoracion": "65.80%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Cuscús"
+    },
+    "Receta de Pasta con carnes frías": {
+        "ingredientes": [
+            "400 gramos de Pasta larga (cintas, tallarines, etc)",
+            "1 bote de Tomate frito",
+            "200 mililitros de Nata",
+            "150 gramos de Salami",
+            "150 gramos de Jamón ibérico",
+            "150 gramos de Peperoni",
+            "2 cucharadas soperas de Aceite de oliva",
+            "1 cucharada sopera de Cebollino",
+            "1 cucharadita de Sal",
+            "1 pizca de Pimienta negra molida",
+            "1 cucharada sopera de Orégano",
+            "100 gramos de Queso parmesano rallado"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Pasta larga"
+    },
+    "Receta de Estofado de carne para pastas": {
+        "ingredientes": [
+            "300 gramos de roast beef",
+            "1 cebolla",
+            "¼ morrón",
+            "1 diente de ajo",
+            "½ zanahoria",
+            "1 lata de tomates perita cubeteados",
+            "1 hoja de laurel",
+            "1 cucharada sopera de tomillo",
+            "1 cucharada sopera de pimentón dulce",
+            "1 cucharada sopera de orégano"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Guiso"
+    },
+    "Receta de Pasta carbonara sin lactosa": {
+        "ingredientes": [
+            "1 Cebolla",
+            "1 Ajo",
+            "100 gramos de Bacon o panceta ahumada (sin lactosa",
+            "1 bote de Nata vegetal o crema de leche vegana",
+            "1 Huevo",
+            "100 gramos de Pasta (tallarines en este caso)",
+            "1 pizca de Sal",
+            "1 pizca de Pimienta negra molida",
+            "1 pizca de Nuez moscada"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Pasta larga"
+    },
+    "Recetas con maicena": {
+        "ingredientes": [],
+        "Valoracion": "100.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Nutrición y salud"
+    },
+    "Receta de Pasta al pomodoro": {
+        "ingredientes": [
+            "200 gramos de pasta",
+            "1 cucharada sopera de aceite de oliva",
+            "½ pieza de cebolla picada",
+            "1 diente de ajo picado",
+            "3 piezas de jitomate picado",
+            "sal y pimienta al gusto",
+            "2 hojas de laurel",
+            "½ taza de vino blanco o agua",
+            "1 cucharadita de mantequilla sin sal",
+            "1 pizca de albahaca seca o 2 hojas frescas picadas"
+        ],
+        "Valoracion": "90.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Macarrones"
     }
 }
