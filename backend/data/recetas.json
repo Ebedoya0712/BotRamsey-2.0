@@ -1838,5 +1838,178 @@
         "Duracion": "30m",
         "Dificultad": "baja",
         "Tipo": "Macarrones"
+    },
+    "Receta de Huevos pintados de dinosaurio": {
+        "ingredientes": [
+            "3 unidades de Huevo",
+            "Colorante alimenticio rojo",
+            "Colorante alimenticio amarillo",
+            "Colorante alimenticio azul",
+            "3 unidades de Bolsas plásticas"
+        ],
+        "Valoracion": "91.20%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Huevos cocidos"
+    },
+    "Jugos para limpiar el hígado graso": {
+        "ingredientes": [],
+        "Valoracion": "89.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Jugos y zumos"
+    },
+    "Receta de Mayonesa sin huevo ni leche": {
+        "ingredientes": [
+            "3 cucharadas soperas de aquafaba",
+            "6 cucharadas soperas de aceite de oliva",
+            "½ cucharada postre de jugo de limón",
+            "1 pizca de sal",
+            "1 pizca de ajo en polvo",
+            "1 pizca de mostaza"
+        ],
+        "Valoracion": "96.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Mayonesa"
+    },
+    "Cómo dar sabor a las comidas sin sal": {
+        "ingredientes": [],
+        "Valoracion": "100.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Ideas para condimentar"
+    },
+    "Receta de Bocadillo San Francisco": {
+        "ingredientes": [
+            "4 filetes de Lomo de cerdo",
+            "50 gramos de Lechuga",
+            "2 lonchas de Queso",
+            "1 pizca de Sal",
+            "2 cucharadas soperas de Mayonesa"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "15m",
+        "Dificultad": "baja",
+        "Tipo": "Bocadillos y sándwiches"
+    },
+    "Receta de Migas de plátano con chicharrón": {
+        "ingredientes": [
+            "300 gramos de Plátano verde",
+            "200 gramos de Chicharrón",
+            "100 gramos de Cebolla en rama",
+            "5 gramos de Ají en polvo",
+            "10 mililitros de Aceite vegetal"
+        ],
+        "Valoracion": "86.60%",
+        "Duracion": "45m",
+        "Dificultad": "media",
+        "Tipo": "Cerdo"
+    },
+    "Receta de Croquetas griegas de calabacín": {
+        "ingredientes": [
+            "500 gramos de Calabacín",
+            "½ unidad de Cebolleta",
+            "1 unidad de Huevo",
+            "4 cucharadas soperas de Pan rallado",
+            "2 cucharadas soperas de Queso feta rallado",
+            "1 pizca de Sal",
+            "1 pizca de Pimienta negra molida",
+            "1 puñado de Hierbabuena fresca",
+            "1 unidad de Huevo",
+            "150 gramos de Pan rallado",
+            "150 gramos de Harina",
+            "400 mililitros de Aceite de oliva"
+        ],
+        "Valoracion": "80.00%",
+        "Duracion": "45m",
+        "Dificultad": "media",
+        "Tipo": "Croquetas"
+    },
+    "¿Se puede comer espinaca cruda?": {
+        "ingredientes": [],
+        "Valoracion": "60.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Nutrición y salud"
+    },
+    "Té de kombucha": {
+        "ingredientes": [
+            "1 litro de agua filtrada",
+            "1 scoby o colonia de kombucha",
+            "1 bolsita de té verde o negro",
+            "4 cucharadas soperas de azúcar común o refinado",
+            "3 cucharadas soperas de vinagre de manzana pasteurizado",
+            "Hibisco deshidratado al gusto (opcional)"
+        ],
+        "Valoracion": "100.00%",
+        "Duracion": "24h",
+        "Dificultad": "baja",
+        "Tipo": "Té"
+    },
+    "Receta de Flan de arroz con leche (sin horno)": {
+        "ingredientes": [
+            "1 taza de arroz",
+            "2 tazas de agua                                                                    (480 mililitros)",
+            "1 taza de azúcar                                                                    (200 gramos)",
+            "1 rama de canela",
+            "2 malaguetas (guayabitas o pimienta de Jamaica)",
+            "4 clavos de olor",
+            "1 estrella de anís",
+            "4 tazas de leche                                                                    (960 mililitros)",
+            "6 huevos",
+            "1 lata de leche condensada",
+            "200 mililitros de leche",
+            "1 cucharadita de esencia de vainilla",
+            "1½ tazas de azúcar                                                                    (300 gramos)"
+        ],
+        "Valoracion": "95.80%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Flan"
+    },
+    "Por qué no sube el bizcocho": {
+        "ingredientes": [],
+        "Valoracion": "93.40%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Trucos de cocina"
+    },
+    "¿El arroz tiene gluten o no?": {
+        "ingredientes": [],
+        "Valoracion": "60.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Nutrición y salud"
+    },
+    "Receta de Merluza al horno fácil y rica": {
+        "ingredientes": [
+            "600 filetes de Merluza sin piel ni espinas congelados",
+            "1 chorro de Aceite de oliva virgen extra",
+            "100 mililitros de Vino blanco",
+            "1 pastilla de Caldo de pescado",
+            "1 pizca de Pimienta negra molida",
+            "1 pizca de Ajo molido en polvo",
+            "1 cucharadita de Perejil seco",
+            "1 pizca de Sal"
+        ],
+        "Valoracion": "76.00%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Merluza"
+    },
+    "Por qué no me queda el arroz suelto": {
+        "ingredientes": [],
+        "Valoracion": "88.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Trucos de cocina"
+    },
+    "Consejos para adelgazar sin dieta": {
+        "ingredientes": [],
+        "Valoracion": "100.00%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Nutrición y salud"
     }
 }
