@@ -13,3 +13,4 @@ gtts
 seaborn
 matplotlib
 psycopg2-binary
+speechrecognition
