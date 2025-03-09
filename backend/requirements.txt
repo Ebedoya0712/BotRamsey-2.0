@@ -14,3 +14,5 @@ seaborn
 matplotlib
 psycopg2-binary
 speechrecognition
+google-genai
+python-dotenv

@@ -16,14 +16,19 @@ def modelo():
     ruta_clasificacion = os.path.join(BASE_DIR, "data", "clasificacion.json")
     ruta_filtros = os.path.join(BASE_DIR, "data", "filtros.json")
     ruta_usuario = os.path.join(BASE_DIR, "data", "modelo_usuario.json")
-    df_recetas = cargar_recetas(ruta_recetas)
-    tiempo_favorito, dificultad_favorita, categoria_favorita = procesar_historial(df_recetas)
-    similitud = vectorizar(df_recetas)
-    recomendacion = recomendar_receta(df_recetas, similitud, df_recetas["nombre"].iloc[-1])
-    tipo = tridente_predictivo(recomendacion, ruta_clasificacion)
+    if os.path.exists(ruta_recetas):
+        df_recetas = cargar_recetas(ruta_recetas)
+        tiempo_favorito, dificultad_favorita, categoria_favorita = procesar_historial(df_recetas)
+        similitud = vectorizar(df_recetas)
+        recomendacion = recomendar_receta(df_recetas, similitud, df_recetas["nombre"].iloc[-1])
+        tipo = tridente_predictivo(recomendacion, ruta_clasificacion)
 
-    return {"categoria":categoria_favorita,"dificultad":dificultad_favorita,"tiempo":tiempo_favorito,"url":create_url(tipo, tiempo_favorito, dificultad_favorita, ruta_filtros, ruta_usuario)}
-    
+        print("quepeo")
+
+        return {"categoria":categoria_favorita,"dificultad":dificultad_favorita,"tiempo":tiempo_favorito,"url":create_url(tipo, tiempo_favorito, dificultad_favorita, ruta_filtros, ruta_usuario)}
+    else:
+        print("hola")
+        return  {"categoria":"","dificultad":"","tiempo":"","url":create_url({}, "", "", ruta_filtros, ruta_usuario)}
 
 
 def cargar_recetas(ruta_recetas):
