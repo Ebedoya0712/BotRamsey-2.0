@@ -27,3 +27,8 @@ package-lock.json
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
+
+#data
+backend/data/recetas.json
+backend/data/modelo_usuario.json
+.qodo

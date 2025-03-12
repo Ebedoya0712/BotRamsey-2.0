@@ -69,7 +69,7 @@
     "Receta de Pasteles chilenitos": {
         "ingredientes": [
             "220 gramos de harina de trigo",
-            "100 gramos de mantequilla fr a",
+            "100 gramos de mantequilla fría",
             "90 mililitros de leche",
             "1 cucharada sopera de pisco",
             "2 yemas",
@@ -2011,5 +2011,125 @@
         "Duracion": "Desconocido",
         "Dificultad": "Desconocida",
         "Tipo": "Nutrición y salud"
+    },
+    "Receta de Pan sin gluten": {
+        "ingredientes": [
+            "50 mililitros de agua tibia",
+            "2 cucharaditas de azúcar",
+            "10 gramos de levadura fresca de panadero",
+            "50 gramos de harina de arroz",
+            "325 gramos de harina de arroz",
+            "1 cucharada postre de sal",
+            "1 huevo L",
+            "200 mililitros de agua tibia",
+            "1 cucharada sopera de aceite de oliva"
+        ],
+        "Valoracion": "70.00%",
+        "Duracion": "4h",
+        "Dificultad": "baja",
+        "Tipo": "Pan"
+    },
+    "Receta de Pionono vegetariano": {
+        "ingredientes": [
+            "1 pionono",
+            "400 gramos de ricota cremosa",
+            "10 hojas de albahaca",
+            "1 puñado de rúcula o radicheta",
+            "10 tomates secos",
+            "30 gramos de aceitunas",
+            "50 gramos de pepinillos encurtidos",
+            "1 berenjena",
+            "sal y pimienta a gusto"
+        ],
+        "Valoracion": "50.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Otros aperitivos"
+    },
+    "9 recetas vegetarianas con garbanzos": {
+        "ingredientes": [],
+        "Valoracion": "91.40%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Garbanzos"
+    },
+    "Receta de Mazamorra de harina": {
+        "ingredientes": [
+            "1 litro de agua",
+            "3 ramas de canela",
+            "5 clavos de olor",
+            "azúcar c/n",
+            "65 gramos de harina común",
+            "100 mililitros de leche evaporada"
+        ],
+        "Valoracion": "50.00%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Otros postres"
+    },
+    "Receta de Brownie sin harina": {
+        "ingredientes": [
+            "½ taza de porotos negros secos",
+            "3 cucharadas soperas de aceite",
+            "100 centímetros cúbicos de agua de cocción de los porotos, agua o jugo de naranja",
+            "55 gramos de salvado o copos de avena",
+            "½ cucharada postre de polvo de hornear",
+            "¼ cucharada postre de bicarbonato de sodio",
+            "1 cucharada sopera de almidón de maíz",
+            "1 cucharada sopera de edulcorante líquido",
+            "3 cucharadas soperas de cacao amargo"
+        ],
+        "Valoracion": "93.40%",
+        "Duracion": "45m",
+        "Dificultad": "baja",
+        "Tipo": "Brownie"
+    },
+    "Receta de Alfajores sin azúcar": {
+        "ingredientes": [
+            "160 gramos de harina 0000",
+            "5 sobres de edulcorante",
+            "1 huevo",
+            "40 centímetros cúbicos de aceite neutro (girasol o soja)",
+            "1 cucharada postre de polvo para hornear",
+            "ralladura de piel de 1/2 limón",
+            "100 gramos de dulce de leche sin azúcar"
+        ],
+        "Valoracion": "74.40%",
+        "Duracion": "30m",
+        "Dificultad": "baja",
+        "Tipo": "Dulce de leche"
+    },
+    "Receta de Milhojas de manzana": {
+        "ingredientes": [
+            "5 manzanas verdes",
+            "100 gramos de azúcar                                                                    (½ taza)",
+            "1 cucharadita de canela",
+            "jugo de limón cantidad necesaria"
+        ],
+        "Valoracion": "60.00%",
+        "Duracion": "1h 30m",
+        "Dificultad": "baja",
+        "Tipo": "Manzana"
+    },
+    "Receta de Sopa de almendras el ajo blanco": {
+        "ingredientes": [
+            "200 gramos de almendras crudas",
+            "200 gramos de pan de pueblo, asentado, del día anterior",
+            "2 dientes de ajo",
+            "1 vaso de aceite de oliva",
+            "1 cucharada de vinagre",
+            "1 litro de agua bien fría",
+            "Sal",
+            "Para los tropezones",
+            "1/4 de kilo de uva de moscatel, peladas y sin semillas",
+            "o",
+            "2 tajadas de melón, cortadas en daditos pequeños",
+            "o",
+            "1 manzana, pelada y cortada en daditos pequeños"
+        ],
+        "Valoracion": "68.80%",
+        "Duracion": "Desconocido",
+        "Dificultad": "Desconocida",
+        "Tipo": "Sopas"
     }
 }

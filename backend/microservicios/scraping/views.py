@@ -6,8 +6,7 @@ from google import genai
 from dotenv import load_dotenv
 import os
 
-
-def gemini(text, context=""):
+def gemini(text, context="") -> str:
     """
     Funcion que pasa el texto del usuario por gemini para obtener los datos.
     """
@@ -57,7 +56,6 @@ def buscar_receta_view(request):
         return JsonResponse({"error": "Por favor, proporciona un término de búsqueda."}, status=400)
 
     promt = gemini(query)
-    print("Promt:", promt)
     receta = buscar_receta(promt)
 
     if receta:
@@ -76,3 +74,5 @@ def mostrar_pasos_view(request):
         return JsonResponse(preparacion, safe=False)
     else:
         return JsonResponse({"error": "No se encontró ninguna receta."}, status=404)
+
+
