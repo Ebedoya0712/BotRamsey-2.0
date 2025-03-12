@@ -559,15 +559,7 @@ const RecipeFinder = () => {
               }}
             />
             <Button onClick={handleSendMessage}>Enviar</Button>
-            <AudioRecorder
-              style={{
-                marginLeft: "10px", 
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "8px", 
-              }}
-            ></AudioRecorder>
+            <AudioRecorder onButtonClick={setInputValue}/>
           </InputContainer>
         </ChatArea>
       </ChatContainer>
