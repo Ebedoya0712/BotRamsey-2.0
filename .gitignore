@@ -3,7 +3,7 @@
 __pycache__/
 *.sqlite3
 .env
-venv/
+.venv/
 db.sqlite3
 
 # Django
@@ -27,3 +27,8 @@ package-lock.json
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
+
+#data
+backend/data/recetas.json
+backend/data/modelo_usuario.json
+.qodo
